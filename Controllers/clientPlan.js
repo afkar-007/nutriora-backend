@@ -1,4 +1,4 @@
-const { DietPlanPost, DietPlanEdit } = require("../Services/DietPlan");
+const { DietPlanPost, DietPlanEdit ,DeleteDietPlan} = require("../Services/DietPlan");
 const {
   getDietPlan,
   getOneDietPlan,
@@ -61,14 +61,21 @@ const oneDietPlanGet = async (req, res) => {
   }
 };
 
-const EditDietPlan = async (req, res) => {
+const DelDietPlan = async (req, res) => {
   try {
     const { id } = req.params;
-    const response = await DietPlanEdit(id);
+    const response = await DeleteDietPlan(id);
+
+      if (!response) {
+      return res.status(404).json({
+        message: "Diet Plan Not Found",
+      });
+    }
 
     res.status(200).json({
       message: "Diet Plan Deleted Successfully",
     });
+
   } catch (err) {
     res.status(500).json({
       message: err.message,
@@ -110,11 +117,16 @@ const ChangeIsCompleted = async (req, res) => {
   }
 };
 
+
+
+
+
+
 module.exports = {
   postDietPlan,
   DietPlanGet,
   oneDietPlanGet,
-  EditDietPlan,
+  DelDietPlan,
   fetchDietPlanOne,
   ChangeIsCompleted
 };

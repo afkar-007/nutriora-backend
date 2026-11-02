@@ -29,11 +29,24 @@ async function DietPlanEdit(id,status) {
   
 }
 
+async function DeleteDietPlan(id) {
+  console.log("Received ID:", id);
+
+  const response = await DietPlan.findByIdAndDelete(id);
+
+  console.log("Deleted Document:", response);
+
+  const check = await DietPlan.findById(id);
+
+  console.log("After Delete Check:", check);
+
+  return response;
+}
 
 
 
 
 
 
-module.exports={DietPlanPost,DietPlanEdit}
+module.exports={DietPlanPost,DietPlanEdit,DeleteDietPlan}
 
