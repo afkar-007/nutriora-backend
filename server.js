@@ -13,15 +13,15 @@ const port = process.env.PORT
 const app = express();
 
 app.use(express.json());
-app.use(cors(
-  {
+app.use(
+  cors({
     origin: [
       "http://localhost:5173",
-      "https://nutriora-eight.vercel.app/"
+      "https://nutriora-eight.vercel.app"
     ],
     credentials: true
-  }
-));
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Nutriora backend is running");
