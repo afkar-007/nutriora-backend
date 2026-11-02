@@ -1,0 +1,39 @@
+const DietPlan = require("../Model/DietPlanSchema");
+
+async function DietPlanPost(props) {
+  const { clientId, days, endDate, startDate, title } = props;
+
+  const response = await DietPlan.create({
+    clientId: clientId,
+    days: days,
+    endDate: endDate,
+    startDate: startDate,
+    title: title,
+  });
+
+  return response
+
+
+
+
+}
+
+async function DietPlanEdit(id,status) {
+
+  const response = await DietPlan.findByIdAndUpdate(id,{
+    status:status
+  })
+
+  return response
+
+  
+}
+
+
+
+
+
+
+
+module.exports={DietPlanPost,DietPlanEdit}
+
