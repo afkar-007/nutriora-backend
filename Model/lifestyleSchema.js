@@ -23,7 +23,7 @@ const LifeStyleSchema = new mongoose.Schema({
   },
   medications:{
    type: String,
-    required: true,
+    
   },
   exerciseType: {
     type: [String],
@@ -60,6 +60,11 @@ const LifeStyleSchema = new mongoose.Schema({
     type: String,
     
   },
+  eatingRoutine:{
+    type:String,
+    required:true
+  }
+
 });
 
 const LifeStyle = mongoose.model("lifeStyle", LifeStyleSchema);

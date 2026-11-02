@@ -138,6 +138,7 @@ const postLifeStyle = async (req, res) => {
       digestiveIssues,
       smokingAlcohol,
       additionalNotes,
+      eatingRoutine
     } = req.body;
 
     const props = {
@@ -154,6 +155,7 @@ const postLifeStyle = async (req, res) => {
       digestiveIssues: digestiveIssues,
       smokingAlcohol: smokingAlcohol,
       additionalNotes: additionalNotes,
+      eatingRoutine:eatingRoutine
     };
 
     const response = await LifeStylePosting(props);
