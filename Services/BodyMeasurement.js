@@ -1,7 +1,7 @@
 const BodyMeasurement = require("../Model/BodyMeasurmentsSchema");
 
 async function BodyMeasurementPost(props) {
-    console.log(props);
+   
   const {
     userId,
     height,
