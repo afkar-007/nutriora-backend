@@ -17,7 +17,12 @@ async function LifeStylePosting(props) {
     additionalNotes,
     otherMedicalCondition,
     afford,
-    eatingRoutine
+    eatingRoutine,
+
+    periodDuration,
+    gender,
+
+    urinationFrequency
   } = props;
 
   const response = await LifeStyle.create({
@@ -36,7 +41,13 @@ async function LifeStylePosting(props) {
     additionalNotes: additionalNotes,
     otherMedicalCondition:otherMedicalCondition,
     eatingRoutine:eatingRoutine,
-    afford:afford
+    afford:afford,
+
+
+    gender:gender,
+    periodDuration:periodDuration,
+
+    urinationFrequency:urinationFrequency
   });
 
   return response;

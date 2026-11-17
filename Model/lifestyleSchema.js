@@ -21,18 +21,17 @@ const LifeStyleSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  medications:{
-   type: String,
-    
+  medications: {
+    type: String,
   },
   exerciseType: {
     type: [String],
-    default:[],
+    default: [],
     required: true,
   },
   waterIntake: {
     type: String,
-    
+
     required: true,
   },
   activityLevel: {
@@ -49,7 +48,6 @@ const LifeStyleSchema = new mongoose.Schema({
   // },
   digestiveIssues: {
     type: String,
-   
   },
   smokingAlcohol: {
     type: String,
@@ -58,21 +56,31 @@ const LifeStyleSchema = new mongoose.Schema({
 
   additionalNotes: {
     type: String,
-    
   },
-  otherMedicalCondition:{
-    type:String,
-    
+  otherMedicalCondition: {
+    type: String,
   },
-  afford:{
-    type:String,
-    required:true
-
+  afford: {
+    type: String,
+    required: true,
   },
   eatingRoutine: {
-  type: String,
-  required: true,
-},
+    type: String,
+    required: true,
+  },
+
+  gender: {
+    type: String,
+    required: true,
+  },
+  periodDuration: {
+    type: String,
+  },
+
+  urinationFrequency:{
+    type:String,
+    required:true
+  }
 
 });
 

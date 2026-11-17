@@ -38,7 +38,7 @@ const FoodHabitsSchema = new mongoose.Schema({
 
   eatingHabits: {
     type: String,
-    required: true,
+    
   },
 
   cookingPreference: {
