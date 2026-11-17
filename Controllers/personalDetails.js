@@ -99,6 +99,10 @@ const postFoodHabits = async (req, res) => {
       eatingHabits,
       cookingPreference,
       additionalNotes,
+
+      digestiveConcerns,
+      otherDigestiveConcern
+
     } = req.body;
 
     const props = {
@@ -113,6 +117,9 @@ const postFoodHabits = async (req, res) => {
       eatingHabits: eatingHabits,
       cookingPreference: cookingPreference,
       additionalNotes: additionalNotes,
+     
+      digestiveConcerns:digestiveConcerns,
+      otherDigestiveConcern:otherDigestiveConcern
     };
 
     const response = await FoodHabitsPosting(props);

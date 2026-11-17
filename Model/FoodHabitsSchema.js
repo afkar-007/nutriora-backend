@@ -49,6 +49,16 @@ const FoodHabitsSchema = new mongoose.Schema({
   additionalNotes: {
     type: String,
   },
+
+  digestiveConcerns:{
+    type:String,
+    required:true
+  },
+
+  otherDigestiveConcern:{
+    type:String
+  }
+
 });
 
 const FoodHabits = mongoose.model("foodHabits", FoodHabitsSchema);

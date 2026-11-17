@@ -13,6 +13,9 @@ async function FoodHabitsPosting(props) {
     eatingHabits,
     cookingPreference,
     additionalNotes,
+    
+    digestiveConcerns,
+    digestiveDuration
   } = props;
 
   const response = await FoodHabits.create({
@@ -27,6 +30,9 @@ async function FoodHabitsPosting(props) {
     eatingHabits: eatingHabits,
     cookingPreference: cookingPreference,
     additionalNotes: additionalNotes,
+
+    digestiveConcerns:digestiveConcerns,
+    digestiveDuration:digestiveDuration
   });
 
 
