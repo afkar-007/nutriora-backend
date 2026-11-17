@@ -51,7 +51,8 @@ const FoodHabitsSchema = new mongoose.Schema({
   },
 
   digestiveConcerns:{
-    type:String,
+    type:[String],
+    default:[],
     required:true
   },
 
