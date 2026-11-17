@@ -142,8 +142,8 @@ const postLifeStyle = async (req, res) => {
       digestiveIssues,
       smokingAlcohol,
       additionalNotes,
-      afford
-      // eatingRoutine
+      afford,
+      eatingRoutine
     } = req.body;
 
     const props = {
