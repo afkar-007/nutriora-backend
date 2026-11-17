@@ -28,8 +28,17 @@ const FoodHabitsSchema = new mongoose.Schema({
     required: true,
   },
 
+  otherAllergy: {
+    type: String,
+  },
+
+  otherCuisine: {
+    type: String,
+  },
+
   eatingHabits: {
     type: String,
+    required: true,
   },
 
   cookingPreference: {

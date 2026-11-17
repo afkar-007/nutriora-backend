@@ -60,10 +60,19 @@ const LifeStyleSchema = new mongoose.Schema({
     type: String,
     
   },
-  eatingRoutine:{
+  otherMedicalCondition:{
+    type:String,
+    
+  },
+  afford:{
     type:String,
     required:true
-  }
+
+  },
+  eatingRoutine: {
+  type: String,
+  required: true,
+},
 
 });
 

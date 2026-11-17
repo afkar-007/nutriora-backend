@@ -15,6 +15,8 @@ async function LifeStylePosting(props) {
     digestiveIssues,
     smokingAlcohol,
     additionalNotes,
+    otherMedicalCondition,
+    afford,
     eatingRoutine
   } = props;
 
@@ -32,7 +34,9 @@ async function LifeStylePosting(props) {
     digestiveIssues: digestiveIssues,
     smokingAlcohol: smokingAlcohol,
     additionalNotes: additionalNotes,
-    eatingRoutine:eatingRoutine
+    otherMedicalCondition:otherMedicalCondition,
+    eatingRoutine:eatingRoutine,
+    afford:afford
   });
 
   return response;

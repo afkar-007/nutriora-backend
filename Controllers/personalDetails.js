@@ -92,6 +92,8 @@ const postFoodHabits = async (req, res) => {
       dietType,
       mealsPerDay,
       foodAllergies,
+      otherAllergy,
+      otherCuisine,
       dislikedFoods,
       favoriteCuisines,
       eatingHabits,
@@ -103,6 +105,8 @@ const postFoodHabits = async (req, res) => {
       userId: userId,
       dietType: dietType,
       mealsPerDay: mealsPerDay,
+      otherAllergy:otherAllergy,
+      otherCuisine:otherCuisine,
       foodAllergies: foodAllergies,
       dislikedFoods: dislikedFoods,
       favoriteCuisines: favoriteCuisines,
@@ -138,7 +142,8 @@ const postLifeStyle = async (req, res) => {
       digestiveIssues,
       smokingAlcohol,
       additionalNotes,
-      eatingRoutine
+      afford
+      // eatingRoutine
     } = req.body;
 
     const props = {
@@ -155,6 +160,7 @@ const postLifeStyle = async (req, res) => {
       digestiveIssues: digestiveIssues,
       smokingAlcohol: smokingAlcohol,
       additionalNotes: additionalNotes,
+      afford:afford,
       eatingRoutine:eatingRoutine
     };
 
